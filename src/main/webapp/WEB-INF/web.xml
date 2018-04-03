@@ -11,11 +11,6 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
 
-    <servlet>
-        <servlet-name>Groovy</servlet-name>
-        <servlet-class>groovy.servlet.GroovyServlet</servlet-class>
-    </servlet>
-
     <servlet-mapping>
         <servlet-name>ExampleServlet</servlet-name>
         <url-pattern>/</url-pattern>
