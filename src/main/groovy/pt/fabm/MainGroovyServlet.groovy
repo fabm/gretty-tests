@@ -1,5 +1,7 @@
 package pt.fabm
+
+response.setContentType("APPLICATION/JSON")
+println 'entrou '+request.requestURI
 """\
-ola mundo
-aqui estou eu
-"""
+{"url":"${request.requestURI}"}"""
+
