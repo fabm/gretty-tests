@@ -12,6 +12,10 @@ repositories {
     mavenCentral()
 }
 
+test{
+    systemProperty 'jmeter.home', System.getProperty('jmeter.home')
+}
+
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.4.13'
     compile group: 'org.apache.activemq', name: 'activemq-core', version: '5.7.0'

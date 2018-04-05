@@ -1,11 +1,10 @@
 package pt.fabm
 
 import org.eclipse.jetty.server.Server
-import org.eclipse.jetty.server.handler.DefaultHandler
 
 import java.util.concurrent.CountDownLatch
 
-class ServerLauncher{
+class ServerLauncher {
     private CountDownLatch countDownLatch
     Server server
 
@@ -18,13 +17,18 @@ class ServerLauncher{
         launcher.countDownLatch = new CountDownLatch(1)
         Thread thread = new Thread({
             server.start()
-            launcher.countDownLatch.wait()
         })
         thread.start()
+        launcher.countDownLatch.await()
     }
 
-    void stop(){
+    void stop() {
         countDownLatch.countDown()
+    }
+
+    static void main(String[] args) {
+        //default launch
+        start(8080)
     }
 
 
