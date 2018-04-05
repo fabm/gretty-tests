@@ -1,8 +1,6 @@
 plugins {
     id 'groovy'
     id 'java'
-    id 'org.akhikhl.gretty' version '2.0.0'
-    id 'war'
 }
 
 group 'pt.fabm.gretty.tests'
@@ -10,15 +8,15 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
-gretty {
-    //integrationTestTask = 'test' // name of existing gradle task
-}
 repositories {
     mavenCentral()
 }
 
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.4.13'
+    compile group: 'org.apache.activemq', name: 'activemq-core', version: '5.7.0'
+    compile group: 'org.eclipse.jetty', name: 'jetty-server', version: '9.4.9.v20180320'
+
     testCompile 'org.apache.logging.log4j:log4j-1.2-api:2.0'
     testCompile group: 'org.apache.jmeter', name: 'ApacheJMeter_http', version: '4.0'
     testCompile group: 'org.apache.jmeter', name: 'ApacheJMeter_java', version: '4.0'

@@ -7,7 +7,7 @@
     <servlet>
         <display-name>ExampleServlet</display-name>
         <servlet-name>ExampleServlet</servlet-name>
-        <servlet-class>pt.fabm.MainServlet</servlet-class>
+        <servlet-class>pt.fabm.MainHandler</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
 

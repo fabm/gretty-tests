@@ -16,7 +16,7 @@ class GrettyTests {
         report.delete()
         StandardJMeterEngine standardJMeterEngine = new StandardJMeterEngine();
         String propPath = getClass().getResource("/jmeter.properties").getFile();
-        String jmeterHome = "/Users/francisco/Downloads/apache-jmeter-4.0";
+        String jmeterHome = "C:\\Users\\Altran\\Downloads\\apache-jmeter-4.0";
         JMeterUtils.setJMeterHome(jmeterHome);
         SaveService.loadProperties();
 
